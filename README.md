@@ -5,7 +5,15 @@ The game features multiple crop types, power-ups, scarecrow obstacles, a configu
 
 ---
 
-## 🚀 How to Run
+## Live Demo
+
+[Play Farmer Game here!](https://nlp-saiteja.github.io/farmer-game/)
+
+No setup needed — just click the link to play directly in your browser.
+
+---
+
+## How to Run Locally
 
 Since the project uses ES6 modules, it must be run from a local server:
 
@@ -26,7 +34,7 @@ The game will run in your browser without extra dependencies.
 
 ---
 
-## 🆕 New Features Implemented
+## New Features Implemented
 
 ### Core Features
 
@@ -54,7 +62,7 @@ The game will run in your browser without extra dependencies.
 
 ---
 
-## 🎮 Controls
+## Game Controls
 
 - **Arrow keys (↑ ↓ ← →)** → Move farmer
 - **P** → Pause / Resume
@@ -62,7 +70,7 @@ The game will run in your browser without extra dependencies.
 
 ---
 
-## 📁 File Structure
+## File Structure
 
 ```
 / (project root)
@@ -85,7 +93,7 @@ The game will run in your browser without extra dependencies.
 
 ---
 
-## 🧠 Arrow Functions, `this`, and `.bind(this)`
+## Arrow Functions, `this`, and `.bind(this)`
 
 - **Arrow Functions (lexical `this` binding):**
 
@@ -108,7 +116,7 @@ The game will run in your browser without extra dependencies.
 
 ---
 
-## 🏆 Game Flow
+## Game Flow
 
 1. Press **Start** → Level 1 begins.
 2. Collect crops faster than the AI to reach the goal score.
@@ -118,7 +126,7 @@ The game will run in your browser without extra dependencies.
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Add smarter AI using pathfinding (A\* algorithm) for more realistic behavior.
 - Introduce more crop types and seasonal themes.
