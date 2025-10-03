@@ -2,53 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Farmer Harvest</title>
+  <title>🌾 Farmer Game - Race Against the Robot! 🤖</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <canvas id="game" width="900" height="540" aria-label="farmer harvest canvas"></canvas>
+  <h1>🌾 Farmer Game 🚜</h1>
+  
+  <div id="game-container">
+    <canvas id="game" width="1000" height="600" tabindex="0" aria-label="farmer harvest game"></canvas>
 
-  <div id="ui">
-    <div class="row">
-      <button id="btnStart">Start</button>
-      <button id="btnReset">Reset</button>
-      <span id="status">Menu</span>
+    <div id="ui">
+      <div class="controls">
+        <button id="btnStart">🎮 Start Game</button>
+        <button id="btnReset">🔄 Reset</button>
+        <span id="status">Ready to Play!</span>
+      </div>
+
+      <div class="scores">
+        <div class="score-card player">
+          <h3>👨‍🌾 You (Green)</h3>
+          <div class="score-value" id="score">0</div>
+        </div>
+        <div class="score-card ai">
+          <h3>🤖 Robot (Blue)</h3>
+          <div class="score-value" id="compScore">0</div>
+        </div>
+      </div>
+
+      <div class="game-info">
+        <div class="info-item">
+          <span class="icon">⏱️</span>
+          <span>Time: <strong id="time">60</strong>s</span>
+        </div>
+        <div class="info-item">
+          <span class="icon">🎯</span>
+          <span>Goal: <strong id="goal">15</strong> Points</span>
+        </div>
+        <div class="info-item">
+          <span class="icon">📊</span>
+          <span>Level: <strong id="level">1</strong>/3</span>
+        </div>
+      </div>
     </div>
-    <div class="row">
-      <span>Score: <strong id="score">0</strong></span>
-      <span>Time: <strong id="time">60</strong>s</span>
-      <span>Goal: <strong id="goal">15</strong> Points</span>
+  </div>
+
+  <div class="instructions">
+    <h2 class="instructions-title">📖 How to Play</h2>
+    
+    <div class="instruction-card">
+      <h3>🎮 Game Controls</h3>
+      <ul>
+        <li>Use arrow keys <kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd> to move your farmer</li>
+        <li>Collect crops faster than the Robot Farmer!</li>
+        <li>Avoid the brown scarecrows - they block your path</li>
+        <li>Press <kbd>P</kbd> to pause/resume the game</li>
+        <li>Reach the goal points to advance to the next level!</li>
+      </ul>
     </div>
 
-<!-- Gameplay instructions -->
-<div class="instructions">
-  <h3>How to Play</h3>
-  <ul>
-    <li>You control the <strong>farmer</strong> (brown square with a yellow hat).</li>
-    <li>Use <kbd>←</kbd> <kbd>→</kbd> <kbd>↑</kbd> <kbd>↓</kbd> to move and collect crops 🌾 that randomly appear.</li>
-    <li>Avoid <strong>scarecrows</strong> (wooden obstacles) — you can’t pass through them.</li>
-    <li>You have <strong>60 seconds</strong> to collect at least <strong>15 Points</strong> to win.</li>
-    <li>Press <kbd>P</kbd> to pause/resume. Use <em>Start</em> to begin and <em>Reset</em> to go back to the menu.</li>
-  </ul>
+    <div class="instruction-card">
+      <h3>🌾 Crop Values</h3>
+      <div class="crop-values">
+        <div class="crop-item">
+          <span class="emoji">🌾</span>
+          <span>Wheat = 1 point</span>
+        </div>
+        <div class="crop-item">
+          <span class="emoji">🎃</span>
+          <span>Pumpkin = 3 points</span>
+        </div>
+        <div class="crop-item">
+          <span class="emoji">🍎</span>
+          <span>Golden Apple = 5 points</span>
+        </div>
+      </div>
+    </div>
 
-  <!-- New legend for crop types -->
-  <h4>Crop Values</h4>
-  <ul>
-    <li>Wheat 🌾 = 1 point</li>
-    <li>Pumpkin 🎃 = 3 points</li>
-    <li>Golden Apple 🍎 = 5 points</li>
-  </ul>
-</div>
+    <div class="instruction-card">
+      <h3>⚡ Power-Ups & Tips</h3>
+      <ul>
+        <li>Lightning bolt ⚡ = Double speed for 5 seconds!</li>
+        <li>The blue Robot Farmer moves slowly but smartly</li>
+        <li>You are the green farmer - faster but needs your control!</li>
+        <li>Beat all 3 levels to become the Harvest Champion!</li>
+        <li>Each level gets harder with more scarecrows!</li>
+      </ul>
+    </div>
 
-<h4>Power-Ups</h4>
-<ul>
-  <li><span style="color:#00c3ff;">Speed Boost</span> = Farmer moves twice as fast for 5 seconds</li>
-</ul>
+    <div class="instruction-card">
+      <h3>🏆 How to Win</h3>
+      <ul>
+        <li>Collect crops to earn points before the robot does</li>
+        <li>First to reach the goal points wins the level!</li>
+        <li>If the robot reaches the goal first, game over!</li>
+        <li>Complete all 3 levels to win the entire game!</li>
+        <li>Scores reset each level for fair competition!</li>
+      </ul>
+    </div>
+  </div>
 
-
-  <!-- Use defer (no modules/imports needed) -->
   <script type="module" src="main.js"></script>
-  <noscript>This game requires JavaScript enabled.</noscript>
+  <noscript>This game requires JavaScript to play.</noscript>
 </body>
 </html>

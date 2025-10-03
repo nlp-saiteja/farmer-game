@@ -15,7 +15,7 @@ export default class PowerUp extends Entity {
      */
 
     constructor(x, y, effect = "speed") {
-        super(x, y, 40, 40);
+        super(x, y, 25, 25);
         this.effect = effect;
         this.active = false;
     }
@@ -27,17 +27,22 @@ export default class PowerUp extends Entity {
     draw(ctx) {
         const { x, y, w, h } = this;
         if (this.effect === "speed") {
-            // draw lightning bolt ⚡
-            ctx.fillStyle = "#00c3ff";
+            // --- Thunderbolt Shape ⚡ ---
+            ctx.fillStyle = "#FFD700"; // bright yellow
             ctx.beginPath();
-            ctx.moveTo(x + w * 0.4, y);
-            ctx.lineTo(x + w * 0.6, y + h * 0.4);
-            ctx.lineTo(x + w * 0.3, y + h * 0.4);
-            ctx.lineTo(x + w * 0.6, y + h);
-            ctx.lineTo(x + w * 0.4, y + h * 0.6);
-            ctx.lineTo(x + w * 0.7, y + h * 0.6);
+            ctx.moveTo(x + w * 0.3, y);              // top
+            ctx.lineTo(x + w * 0.6, y + h * 0.4);    // diagonal down-right
+            ctx.lineTo(x + w * 0.4, y + h * 0.4);    // short step left
+            ctx.lineTo(x + w * 0.7, y + h);          // bottom point
+            ctx.lineTo(x + w * 0.4, y + h * 0.6);    // back up-left
+            ctx.lineTo(x + w * 0.6, y + h * 0.6);    // short step right
             ctx.closePath();
             ctx.fill();
+    
+            // outline for contrast
+            ctx.strokeStyle = "#DAA520";
+            ctx.lineWidth = 2;
+            ctx.stroke();
         }
     }
 }

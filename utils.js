@@ -1,7 +1,7 @@
 /**
  * Utility constants and helper functions for the game.
  */
-export const WIDTH = 900, HEIGHT = 540;
+export const WIDTH = 1000, HEIGHT = 600;  // Increased canvas size
 export const TILE = 30;           // for a subtle grid
 export const GAME_LEN = 60;       // seconds
 export const GOAL = 15;           // crops to win

@@ -20,9 +20,9 @@ export default class Crop extends Entity {
 
         // crop types with visuals + point values
         const types = [
-            { name: "wheat", color: "#d9a441", points: 1, w: 12, h: 28 },
-            { name: "pumpkin", color: "#ff8c00", points: 3, w: 28, h: 28 },
-            { name: "goldenApple", color: "#ffd700", points: 5, w: 24, h: 24 }
+            { name: "wheat", color: "#d9a441", points: 1, w: 10, h: 20 },
+            { name: "pumpkin", color: "#ff8c00", points: 3, w: 12, h: 16 },
+            { name: "goldenApple", color: "#ffd700", points: 5, w: 13, h: 15 }
         ];
 
         const chosen = type || types[Math.floor(Math.random() * types.length)];
@@ -80,10 +80,10 @@ export default class Crop extends Entity {
             // ridges
             ctx.strokeStyle = "#cc7000";
             ctx.beginPath();
-            ctx.moveTo(x + w / 2 - 5, y + h / 2 - 8);
-            ctx.lineTo(x + w / 2 - 5, y + h / 2 + 8);
-            ctx.moveTo(x + w / 2 + 5, y + h / 2 - 8);
-            ctx.lineTo(x + w / 2 + 5, y + h / 2 + 8);
+            ctx.moveTo(x + w / 2 - 3, y + h / 2 - 5);
+            ctx.lineTo(x + w / 2 - 3, y + h / 2 + 5);
+            ctx.moveTo(x + w / 2 + 3, y + h / 2 - 5);
+            ctx.lineTo(x + w / 2 + 3, y + h / 2 + 5);
             ctx.stroke();
 
             // stem

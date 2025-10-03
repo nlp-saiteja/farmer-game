@@ -1,0 +1,22 @@
+{
+  "levels": [
+    {
+      "goal": 15,
+      "time": 60,
+      "spawnBase": 0.8,
+      "extraScarecrows": 0
+    },
+    {
+      "goal": 25,
+      "time": 50,
+      "spawnBase": 0.7,
+      "extraScarecrows": 2
+    },
+    {
+      "goal": 35,
+      "time": 45,
+      "spawnBase": 0.6,
+      "extraScarecrows": 3
+    }
+  ]
+}

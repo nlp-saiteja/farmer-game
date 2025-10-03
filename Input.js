@@ -25,7 +25,14 @@ export default class Input {
      * @param {KeyboardEvent} e - Keyboard event
      */
     onKeyDown(e) {
-        if (e.key === "p" || e.key === "P") this.game.togglePause();
+        // Prevent default browser scrolling for arrow keys and space
+        if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(e.key)) {
+            e.preventDefault();
+        }
+        
+        if (e.key === "p" || e.key === "P") {
+            this.game.togglePause();
+        }
         this.keys.add(e.key);
     }
 
@@ -33,7 +40,13 @@ export default class Input {
      * Handle keyup events.
      * @param {KeyboardEvent} e - Keyboard event
      */
-    onKeyUp(e) { this.keys.delete(e.key); }
+    onKeyUp(e) { 
+        // Also prevent default on keyup for consistency
+        if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(e.key)) {
+            e.preventDefault();
+        }
+        this.keys.delete(e.key); 
+    }
 
     /**
      * Remove input event listeners.
