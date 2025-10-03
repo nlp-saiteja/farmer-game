@@ -8,6 +8,8 @@ The game features multiple crop types, power-ups, scarecrow obstacles, a configu
 ## Live Demo
 
 [Play Farmer Game here!](https://nlp-saiteja.github.io/farmer-game/)
+
+
 URL: https://nlp-saiteja.github.io/farmer-game/
 
 No setup needed — just click the link to play directly in your browser.
